@@ -2,8 +2,9 @@ import torch.nn as nn
 from fastai.vision import *
 sys.path.insert(0, '..')
 
-#new unet 
-#wenn ich hier den Ouput anpassen will, muss ich das vortrainierte Netz auch anpassen
+## Uner ResNet
+# source - Unet: https://www.kaggle.com/code/ateplyuk/pytorch-starter-u-net-resnet
+
 def convrelu(in_channels, out_channels, kernel, padding):
     return nn.Sequential(
         nn.Conv2d(in_channels, out_channels, kernel, padding=padding),
@@ -13,7 +14,6 @@ def convrelu(in_channels, out_channels, kernel, padding):
 class UNet(nn.Module):
     def __init__(self, n_class):
         super().__init__()
-        # self.set_dropout = False
         
         self.n_class = n_class
         self.base_model = models.resnet18()
@@ -34,8 +34,6 @@ class UNet(nn.Module):
         self.layer4 = self.base_layers[7]
         self.layer4_1x1 = convrelu(512, 512, 1, 0)
 
-        # if self.set_dropout == True:
-        #     self.dropout = nn.Dropout2d(p=0.5)  # Add Dropout layer with probability of 0.5
 
         self.upsample = nn.Upsample(scale_factor=2, mode='bilinear', align_corners=True)
 
@@ -53,8 +51,7 @@ class UNet(nn.Module):
     def forward(self, input):
         x_original = self.conv_original_size0(input)
         x_original = self.conv_original_size1(x_original)
-
-        #downsampling - baselayers 
+ 
         layer0 = self.layer0(input)
         layer1 = self.layer1(layer0)
         layer2 = self.layer2(layer1)
@@ -86,7 +83,6 @@ class UNet(nn.Module):
         x = torch.cat([x, layer0], dim=1)
         x = self.conv_up0(x)
 
-        # head layers
         x = self.upsample(x)
         x = torch.cat([x, x_original], dim=1)
         x = self.conv_original_size2(x)
