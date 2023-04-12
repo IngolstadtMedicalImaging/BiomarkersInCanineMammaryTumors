@@ -29,7 +29,8 @@ For the segmentation network training of different classes a Jupyter notebook is
 </p>
 
 ## Limitations 
-Due to the limitation of having only a small dataset of such complex images, the segmentation accuracy was low. 
+
+Due to the limitation of having only a small dataset of such complex images, the segmentation accuracy of the final network was low. 
 However, this pipeline can be used as a baseline for future works.
 
 
@@ -37,7 +38,7 @@ However, this pipeline can be used as a baseline for future works.
 We provide two pre-trained models for patch segmentation and classification. These can be found in the 
 [models](models) folder. 
 <!-- A detailed evaluation of these models can be found in our ScientificData paper:   
-> Link to paper --> -->
+<!-- > Link to paper --> 
 
 
 
