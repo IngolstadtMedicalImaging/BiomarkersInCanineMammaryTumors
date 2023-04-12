@@ -3,9 +3,6 @@
 This repository contains code examples for working with a dataset of microscopic whole slide images.
 It is an adaptation of the CanineCutaneousTumors repository that can be found [here](https://github.com/DeepPathology/CanineCutaneousTumors).
 
-This repository contains code examples for working with our publicly available dataset on microscopicwhole slide images 
-(WSIs) of canine cutaneous tumors. The dataset can be downloaded via the website of The Cancer Imaging Atlas: .
-
 <p float="left">
   <img src="CMT_annotation_SlideRunner.png" width="500" alt="Dataset"/>
 </p>
