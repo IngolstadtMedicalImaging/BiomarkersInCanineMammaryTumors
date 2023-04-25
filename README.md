@@ -19,13 +19,13 @@ For the segmentation network training of different classes a Jupyter notebook is
 ## Visualization Patch Prediction Tubule Formation
 
 <p float="left">
-  <img src="single_patch_pred_tub_1_small.png" width="300" alt="Segmentation prediction"/>
+  <img src="single_patch_pred_tub_1_small.png" width="500" alt="Segmentation prediction"/>
 </p>
 
 ## Visualization Patch Prediction Nuclear Pleomorphism
 
 <p float="left">
-  <img src="single_patch_pred_small.png" width="300" alt="Segmentation prediction"/>
+  <img src="single_patch_pred_small.png" width="500" alt="Segmentation prediction"/>
 </p>
 
 ## Limitations 
