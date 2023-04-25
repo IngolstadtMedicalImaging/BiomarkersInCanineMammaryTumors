@@ -158,7 +158,7 @@ class BuildingsDataset(Dataset):
         return patches
 
     
-    def get_patch(self, x: int = 0, y: int = 0, slide: object = None): #TODO: slide als argument übergeben 
+    def get_patch(self, x: int = 0, y: int = 0, slide: object = None): 
         rgb = np.array(slide.read_region(location=(int(x * self.down_factor), int(y * self.down_factor)),
                                               level=self.level, size=(self.width, self.height)))[:, :, :3]
         return rgb
