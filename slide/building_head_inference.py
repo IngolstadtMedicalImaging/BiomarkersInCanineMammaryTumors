@@ -164,7 +164,7 @@ class BuildingsDataset_Head(Dataset):
 
         contains_tumor = False
 
-        # über die Polygone iterieren - eine Liste mit Json Formatierung der Annotationen 
+        # iterate over polygons
         for poly in self.polygons:
             coordinates = np.array(poly['segmentation']).reshape(
                 (-1, 2)) // down_factor
@@ -182,7 +182,7 @@ class BuildingsDataset_Head(Dataset):
             y_patch = cv2.drawContours(y_patch, [coordinates.reshape(
                 (-1, 1, 2)).astype(int)], -1, label, -1)
         
-        #if true draw tumor as dominant label - GEÄNDERT
+        #if true draw tumor as dominant label
         if contains_tumor:
             #only draw tumor contours 
             for poly in self.polygons: 
@@ -413,8 +413,6 @@ class BuildingsDataset_Head(Dataset):
             return [image, gt_mask, full_pred_mask_array, areas]
         else:
             return [image, gt_mask, full_pred_mask_array]
-    
-        #TODO: stitch together masks 
 
 
     def __len__(self):

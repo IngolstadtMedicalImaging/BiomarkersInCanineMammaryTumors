@@ -167,7 +167,7 @@ class BuildingsDataset(Dataset):
         y_patch = np.zeros(shape=(self.height, self.width), dtype=np.int8)
         inv_map = {v: k for k, v in self.tissue_classes.items()}  
         
-        #prüfen ob Tumor Label enthalten und wenn ja, dann Nekrosen bzw. Nicht Tumor innnerhalb von Tumor überschreiben 
+        #used to override the nekroses label if inside a tumor (otherwise its no tumor)
         contains_tumor = False
 
         # iterate over polygons
