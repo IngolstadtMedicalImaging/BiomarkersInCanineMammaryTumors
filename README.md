@@ -1,6 +1,6 @@
 # CanineMammaryTumors
 
-This repository contains code for building a segmentation model for microscopic whole slide images. Initially this code was used for the segmentation of biomarkers in Canine Mammary Tumors. 
+This repository contains code for building a segmentation model for microscopic whole slide images. Initially this code was used for the segmentation of biomarkers in Canine Mammary Tumors as a part of the bachelor thesis by Laura Klose. 
 The project is an adaptation of the CanineCutaneousTumors repository that can be found [here](https://github.com/DeepPathology/CanineCutaneousTumors).
 
 <p float="left">
