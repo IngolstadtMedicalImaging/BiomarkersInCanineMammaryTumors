@@ -1,7 +1,7 @@
 # CanineMammaryTumors
 
-This repository contains code examples for working with a dataset of microscopic whole slide images.
-It is an adaptation of the CanineCutaneousTumors repository that can be found [here](https://github.com/DeepPathology/CanineCutaneousTumors).
+This repository contains code for building a segmentation model for microscopic whole slide images. Initially this code was used for the segmentation of biomarkers in Canine Mammary Tumors. 
+The project is an adaptation of the CanineCutaneousTumors repository that can be found [here](https://github.com/DeepPathology/CanineCutaneousTumors).
 
 <p float="left">
   <img src="CMT_annotation_SlideRunner.png" width="500" alt="Dataset"/>
