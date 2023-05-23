@@ -1,4 +1,4 @@
-# CanineMammaryTumors
+# Canine Mammary Tumors
 
 This repository contains code for building a segmentation model for microscopic whole slide images. Initially this code was used for the segmentation of biomarkers in Canine Mammary Tumors. 
 The project is an adaptation of the CanineCutaneousTumors repository that can be found [here](https://github.com/DeepPathology/CanineCutaneousTumors).
@@ -16,13 +16,13 @@ For the segmentation network training of different classes a Jupyter notebook is
 
 
 
-## Visualization Patch Prediction Tubule Formation
+## Visualization Patch Prediction of Tubule Formation
 
 <p float="left">
   <img src="single_patch_pred_tub_1_small.png" width="500" alt="Segmentation prediction"/>
 </p>
 
-## Visualization Patch Prediction Nuclear Pleomorphism
+## Visualization Patch Prediction of Nuclear Pleomorphism
 
 <p float="left">
   <img src="single_patch_pred_small.png" width="500" alt="Segmentation prediction"/>
